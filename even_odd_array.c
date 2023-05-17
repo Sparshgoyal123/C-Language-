@@ -1,36 +1,15 @@
 #include<stdio.h>
-int main()
+int main(int argc, char const *argv[])
 {
-	int n;
-	scanf("%d",&n);
-	int a[n],even=0,odd=0,i;
-	for(i=0;i<n;i++)
-		scanf("%d",&a[i]);
-	for(i=0;i<n;i++)
-		if(a[i]%2==0)
-			even++;
-		else
-			odd++;
-	printf("\n");
-	int x=even,y=odd;
-	int b[x],c[y];
-	for(i=0;i<n;i++)
-		if(a[i]%2==0)
-		{
-			b[x-1]=a[i];
-			x--;
-		}
-		else
-		{
-			c[y-1]=a[i];
-			y--;
-		}
-	printf("even ");
-	for(i=0;i<even;i++)
-		printf("%d ",b[i]);
-	printf("\n");
-	printf("odd ");
-	for(i=0;i<odd;i++)
-		printf("%d ",c[i]);
-	return 0;
+    int i ,a[8]={1,2,3,4,5,6,7,8},c = 0,d = 0;
+    for (i=0;i<=7;i++){
+        if (a[i]%2==0){
+            c = c+1;
+        }else{
+            d = d+1;
+        }
+    }
+    printf("Total Even Element = %d\n ",c);
+    printf("Total Odd Element = %d ",d);
+    return 0;
 }
